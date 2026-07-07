@@ -21,14 +21,14 @@ La aplicación cuenta con una arquitectura desacoplada basada en controladores l
 
 # ✨ Características
 
-- 👥 Registro e inicio de sesión de usuarios.
-- 🚀 Publicación de campañas de crowdfunding.
-- 💰 Sistema de aportes económicos.
-- 📊 Panel administrativo.
-- 📈 Estadísticas generales de la plataforma.
-- 📱 Diseño responsive con Bootstrap 5.
-- 🔒 Persistencia mediante MySQL y PDO.
-- ⚙️ Arquitectura basada en MVC ligero utilizando PHP.
+- Registro e inicio de sesión de usuarios.
+- Publicación de campañas de crowdfunding.
+- Sistema de aportes económicos.
+- Panel administrativo.
+- Estadísticas generales de la plataforma.
+- Diseño responsive con Bootstrap 5.
+- Persistencia mediante MySQL y PDO.
+- Arquitectura basada en MVC ligero utilizando PHP.
 
 ---
 
