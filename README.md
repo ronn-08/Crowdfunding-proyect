@@ -143,54 +143,27 @@ Configure una contraseña para el usuario **root**.
 
 ---
 
-# ⚙️ 2. Configuración del Proyecto y Base de Datos
+## ⚙️ 2. Configuración del Proyecto y Base de Datos
 
-## Descargar el proyecto
+Una vez instalado el entorno, siga estos pasos para inicializar la aplicación y la persistencia de datos:
 
-Clone el repositorio o descárguelo como ZIP.
-
----
-
-## Crear la Base de Datos
-
-Ejecute:
-
-```sql
-CREATE DATABASE bd_crowdfunding
-CHARACTER SET utf8mb4
-COLLATE utf8mb4_unicode_ci;
-```
-
-Después importe el archivo:
-
-```
-bd_crowdfunding.sql
-```
-
----
-
-## Configurar la conexión
-
-Abra:
-
-```
-config/database.php
-```
-
-Modifique los parámetros según su instalación:
-
-```php
-private $host = "localhost";
-private $db_name = "bd_crowdfunding";
-private $username = "root";
-private $password = "TU_CONTRASEÑA_DE_MYSQL";
-```
-
-> Si utiliza XAMPP por defecto, deje la contraseña vacía:
-
-```php
-private $password = "";
-```
+1. **Descarga del Proyecto:** Descargue este repositorio en formato ZIP o clónelo, y extráigalo por completo en una carpeta local de su elección.
+2. **Importación de la Base de Datos:**
+   * Abra su gestor de bases de datos preferido (phpMyAdmin, MySQL Workbench o consola CMD).
+   * Cree una nueva base de datos vacía ejecutando el comando:
+     ```sql
+     CREATE DATABASE bd_crowdfunding CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+     ```
+   * Importe el archivo estructural de tablas e historial de pruebas ubicado en la raíz del proyecto llamado **`bd_crowdfunding.sql`**.
+3. **Puente de Conexión en PHP:**
+   * Abra el archivo **`config/database.php`** en su editor de código.
+   * Modifique las credenciales de conexión para que coincidan con los parámetros de su motor MySQL local:
+     ```php
+     private $host = "localhost";
+     private $db_name = "bd_crowdfunding";
+     private $username = "root";
+     private $password = "TU_CONTRASEÑA_DE_MYSQL"; // Dejar vacío "" si usa XAMPP por defecto
+     ```
 
 ---
 
