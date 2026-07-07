@@ -111,3 +111,5 @@ Error: Conexión rechazada o fallo de login al intentar registrarse
 Causa: Las credenciales del archivo config/database.php no coinciden con las del motor local de MySQL Server o el servicio de base de datos se encuentra apagado.
 
 Solución: Asegúrese de que el puerto de MySQL esté activo en su computadora y revise que la contraseña de su usuario root esté bien digitada en el script del puente de conexión.
+
+
