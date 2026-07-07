@@ -6,18 +6,6 @@ La aplicación cuenta con una arquitectura desacoplada basada en controladores l
 
 ---
 
-# 📋 Tabla de Contenidos
-
-- [Características](#-características)
-- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
-- [Requisitos Previos](#-requisitos-previos-del-sistema)
-- [Instalación del Entorno](#-1-instalación-del-entorno-servidor-localhost)
-- [Configuración del Proyecto](#-2-configuración-del-proyecto-y-base-de-datos)
-- [Ejecución](#-3-despliegue-y-ejecución-de-la-aplicación)
-- [Credenciales de Administrador](#-credenciales-maestras-de-acceso-administrador-unificado)
-- [Resolución de Problemas](#-4-resolución-de-errores-comunes-troubleshooting)
-
----
 
 # ✨ Características
 
@@ -203,29 +191,14 @@ rapn0821
 
 ---
 
+
 # 🚨 4. Resolución de Errores Comunes (Troubleshooting)
 
-## Error
+## ❌ Error: "php" no se reconoce como un comando interno o externo
 
-```
-"php" no se reconoce como un comando interno o externo
-```
+**Causa:** Las variables de entorno de Windows no se cargaron correctamente o la ruta en el PATH tiene un error tipográfico.
 
-### Causa
-
-El PATH de Windows no fue configurado correctamente.
-
-### Solución
-
-Verifique que exista:
-
-```
-C:\php
-```
-
-en las variables de entorno.
-
-Si utiliza XAMPP también puede iniciar el servidor mediante:
+**Solución:** Cierre todas las ventanas del CMD, verifique que los archivos estén en `C:\php` y abra una nueva terminal para forzar la lectura del PATH actualizado. Alternativamente, ejecute el comando usando la ruta absoluta de su instalación:
 
 ```bash
 C:\xampp\php\php.exe -S localhost:8000
@@ -233,63 +206,25 @@ C:\xampp\php\php.exe -S localhost:8000
 
 ---
 
-## Error
+## ❌ Error: Fatal error: Uncaught PDOException: Could not find driver
 
-```
-Fatal error:
-Uncaught PDOException:
-Could not find driver
-```
+**Causa:** El módulo encargado de comunicar a PHP con el servidor MySQL no ha sido habilitado dentro de la configuración del sistema.
 
-### Causa
-
-La extensión PDO MySQL no está habilitada.
-
-### Solución
-
-Edite:
-
-```
-C:\php\php.ini
-```
-
-y habilite:
+**Solución:** Abra el archivo `C:\php\php.ini`, asegúrese de haber removido el punto y coma (`;`) al inicio de la línea:
 
 ```ini
 extension=pdo_mysql
 ```
 
-Después reinicie el servidor.
+y reinicie el servidor de la terminal.
 
 ---
 
-## Error
+## ❌ Error: Conexión rechazada o fallo de login al intentar registrarse
 
-```
-Conexión rechazada
-```
+**Causa:** El servicio local de MySQL Server se encuentra apagado o las credenciales mapeadas en el script `config/database.php` son incorrectas.
 
-o
-
-```
-Fallo de login
-```
-
-### Causa
-
-MySQL no está iniciado o las credenciales son incorrectas.
-
-### Solución
-
-- Verifique que MySQL esté ejecutándose.
-- Revise el puerto utilizado.
-- Compruebe que la contraseña del usuario **root** coincida con la configurada en:
-
-```
-config/database.php
-```
-
----
+**Solución:** Asegúrese de que el puerto de MySQL esté activo en su computadora y revise que la contraseña de su usuario `root` coincida exactamente con la declarada en el archivo del puente de conexión.
 
 # 📄 Licencia
 
