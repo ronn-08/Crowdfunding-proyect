@@ -2,7 +2,8 @@
 🚀 Crowdfunding UG - Plataforma de Financiamiento Colectivo
 Ecosistema web integral diseñado para la gestión, publicación y financiamiento colectivo transparente de proyectos de innovación, causas sociales y emprendimientos tecnológicos dentro de la comunidad de la Universidad de Guayaquil. La aplicación cuenta con una arquitectura desacoplada basada en controladores lógicos en PHP, diseño responsivo comercial con Bootstrap 5 y un motor transaccional relacional bajo cumplimiento ACID en MySQL.
 
-🛠️ Requisitos Previos del Sistema
+# 🛠️ Requisitos Previos del Sistema
+
 Para ejecutar esta aplicación en un entorno local (localhost), la computadora del usuario debe contar con los siguientes elementos instalados y configurados:
 
 -Intérprete de PHP: Versión 8.1 o superior.
