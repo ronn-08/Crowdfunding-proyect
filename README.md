@@ -224,6 +224,84 @@ y reinicie el servidor de la terminal.
 
 **Causa:** El servicio local de MySQL Server se encuentra apagado o las credenciales mapeadas en el script `config/database.php` son incorrectas.
 
+# 🏗️ Arquitectura Técnica del Proyecto
+
+La aplicación sigue una arquitectura modular basada en la separación de responsabilidades, facilitando el mantenimiento, la escalabilidad y la organización del código fuente.
+
+```text
+crowdfunding_proyecto/
+│
+├── index.php
+│   └── Página de inicio y catálogo público dinámico.
+│
+├── components/
+│   ├── header.php
+│   │   └── Barra de navegación superior con inicio de sesión dinámico.
+│   │
+│   ├── footer.php
+│   │   └── Pie de página institucional de la Universidad de Guayaquil.
+│   │
+│   └── admin_nav.php
+│       └── Submenú dinámico para el panel administrativo.
+│
+├── config/
+│   ├── database.php
+│   │   └── Clase de conexión segura a MySQL mediante PDO.
+│   │
+│   └── bd_crowdfunding.sql
+│       └── Script de creación de la base de datos, tablas y datos iniciales.
+│
+├── controllers/
+│   ├── login_proc.php
+│   │   └── Procesamiento del inicio de sesión y control de roles.
+│   │
+│   ├── logout.php
+│   │   └── Cierre seguro de sesiones.
+│   │
+│   └── usuario_crud.php
+│       └── Lógica de las operaciones CRUD de usuarios.
+│
+├── views/
+│   ├── login.php
+│   │   └── Portal de autenticación.
+│   │
+│   ├── registro_publico.php
+│   │   └── Registro de nuevos usuarios.
+│   │
+│   ├── crear_campana.php
+│   │   └── Creación y publicación de campañas de crowdfunding.
+│   │
+│   ├── realizar_donacion.php
+│   │   └── Interfaz para realizar donaciones.
+│   │
+│   ├── gestion_usuarios.php
+│   │   └── Administración del padrón de usuarios.
+│   │
+│   ├── gestion_categorias.php
+│   │   └── Administración de categorías del sistema.
+│   │
+│   ├── gestion_metodos_pago.php
+│   │   └── Administración de métodos de pago.
+│   │
+│   └── dashboard_reportes.php
+│       └── Panel administrativo con reportes y consultas de negocio.
+│
+└── uploads/
+    └── evidencias/
+        └── Almacenamiento de imágenes cargadas por los emprendedores.
+```
+
+## 📂 Organización de Directorios
+
+| Directorio | Descripción |
+|------------|-------------|
+| **components/** | Componentes reutilizables de la interfaz gráfica. |
+| **config/** | Configuración de la base de datos y scripts SQL. |
+| **controllers/** | Lógica de negocio y procesamiento de solicitudes. |
+| **views/** | Interfaces de usuario y paneles del sistema. |
+| **uploads/** | Almacenamiento de archivos e imágenes cargadas por los usuarios. |
+| **index.php** | Punto de entrada principal de la aplicación. |
+
 **Solución:** Asegúrese de que el puerto de MySQL esté activo en su computadora y revise que la contraseña de su usuario `root` coincida exactamente con la declarada en el archivo del puente de conexión.
 
 # 📄 Licencia
