@@ -248,7 +248,7 @@ crowdfunding_proyecto/
 │   ├── database.php
 │   │   └── Clase de conexión segura a MySQL mediante PDO.
 │   │
-│   └── bd_crowdfunding.sql
+│   └── proyectoBD.sql
 │       └── Script de creación de la base de datos, tablas y datos iniciales.
 │
 ├── controllers/
