@@ -10,7 +10,8 @@ Para ejecutar esta aplicación en un entorno local (localhost), la computadora d
 
 -Motor de Base de Datos: MySQL Server 8.0 o superior (o MariaDB equivalente).
 
-📦 Parte 1: Instalación del Entorno Servidor (Localhost)
+#📦 Parte 1: Instalación del Entorno Servidor (Localhost)
+
 El usuario puede elegir cualquiera de los siguientes dos métodos para levantar los motores de ejecución en su sistema operativo Windows:
 
 Método A: Instalación Automatizada (Recomendado para usuarios rápidos)
@@ -20,20 +21,21 @@ Método A: Instalación Automatizada (Recomendado para usuarios rápidos)
 
 3. Abra el XAMPP Control Panel y encienda el módulo de MySQL haciendo clic en el botón "Start".
 
-Método B: Instalación Purista Manual (Sin suites de terceros)
+#Método B: Instalación Purista Manual (Sin suites de terceros)
+
 Si prefiere configurar las herramientas de forma independiente, ejecute el siguiente procedimiento:
 
-Descarga de PHP: Descargue el paquete ZIP de PHP (versión VS16 x64 Thread Safe) desde windows.php.net/download.
+1. Descarga de PHP: Descargue el paquete ZIP de PHP (versión VS16 x64 Thread Safe) desde windows.php.net/download.
 
-Extracción: Cree una carpeta raíz en el disco local C llamada php (C:\php) y extraiga todo el contenido del ZIP en dicha ruta.
+2. Extracción: Cree una carpeta raíz en el disco local C llamada php (C:\php) y extraiga todo el contenido del ZIP en dicha ruta.
 
-Configuración de Variables de Entorno (PATH):
+3. Configuración de Variables de Entorno (PATH):
 
-En el buscador de Windows escriba "Variables de entorno" y abra la configuración del sistema.
+  -En el buscador de Windows escriba "Variables de entorno" y abra la configuración del sistema.
 
-Haga clic en el botón "Variables de entorno...".
+  -Haga clic en el botón "Variables de entorno...".
 
-En la sección Variables del sistema, localice la variable Path, selecciónela y haga clic en "Editar".
+  -En la sección Variables del sistema, localice la variable Path, selecciónela y haga clic en "Editar".
 
 Haga clic en "Nuevo" y añada la ruta exacta: C:\php. Guarde presionando "Aceptar" en todas las ventanas.
 
